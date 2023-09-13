@@ -63,12 +63,7 @@ export default function Detail() {
 					{country?.Activities?.length === 0 ? (
 						<h5 className={style.noActivity}>
 							There are no entries for {country?.name}. To add an activity,
-							please fill in this
-							<a href="https://countries-pi-pocetti-front.vercel.app/activity/create">
-								{' '}
-								form
-							</a>
-							.
+							please click "✨ Create activity" .
 						</h5>
 					) : (
 						country?.Activities?.map((activity) => (
