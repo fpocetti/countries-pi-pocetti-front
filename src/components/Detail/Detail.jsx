@@ -65,7 +65,7 @@ export default function Detail() {
 						<h5 className={style.noActivity}>
 							There are no entries for {country?.name}. To add an activity,
 							follow this
-							<Link to="/activity/create">link</Link>.
+							<Link to="/activity/create"> link</Link>.
 						</h5>
 					) : (
 						country?.Activities?.map((activity) => (
