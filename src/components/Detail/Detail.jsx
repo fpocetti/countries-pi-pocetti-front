@@ -64,7 +64,11 @@ export default function Detail() {
 						<h5 className={style.noActivity}>
 							There are no entries for {country?.name}. To add an activity,
 							please fill in this
-							<a href="http://localhost:5173/activity/create"> form</a>.
+							<a href="https://countries-pi-pocetti-front.vercel.app/activity/create">
+								{' '}
+								form
+							</a>
+							.
 						</h5>
 					) : (
 						country?.Activities?.map((activity) => (
