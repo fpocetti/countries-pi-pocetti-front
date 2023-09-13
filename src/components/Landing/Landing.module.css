@@ -24,6 +24,8 @@
 .landingButton {
 	border-width: 1.5px;
 	border-color: #646cff;
+	background-color: white;
+	color: black;
 }
 button:hover {
 	box-shadow: 2px aliceblue;

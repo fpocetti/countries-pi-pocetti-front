@@ -29,14 +29,15 @@
 	padding: 0.5em 5px; /* Adjust padding for better appearance */
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	height: 39px;
+	color: black;
 }
 
 .input:hover {
 	cursor: text;
 	filter: drop-shadow(0 0 0.2em rgb(228, 228, 241));
-	/*-webkit-transform: scale(1.02); */
 }
 
 input::placeholder {
 	padding: 5px;
+	color: rgb(56, 56, 56);
 }
