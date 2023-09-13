@@ -5,6 +5,7 @@ import axios from 'axios';
 import style from './Detail.module.css';
 import { useSelector } from 'react-redux';
 import EmptyCard from '../EmptyCard/EmptyCard';
+import { Link } from 'react-router-dom';
 
 export default function Detail() {
 	const { id } = useParams();
@@ -63,7 +64,8 @@ export default function Detail() {
 					{country?.Activities?.length === 0 ? (
 						<h5 className={style.noActivity}>
 							There are no entries for {country?.name}. To add an activity,
-							please click "✨ Create activity" .
+							follow this
+							<Link to="/activity/create">link</Link>.
 						</h5>
 					) : (
 						country?.Activities?.map((activity) => (
