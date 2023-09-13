@@ -1,0 +1,175 @@
+.centerForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow-x: auto;
+}
+
+.formContainer {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	/* background: linear-gradient(rgba(25, 24, 24, 0.9), rgba(9, 9, 9, 0.3)),
+		url('../../assets/form-activities-background-2.jpg'); */
+	background-color: #3a3a3a;
+	width: 800px;
+	margin-top: 30px;
+	border-radius: 5px;
+}
+
+.title {
+	line-height: 1.1;
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	margin: 20px 0 15px 0;
+}
+
+.subtitle {
+	margin: 5px 0 10px 0;
+	background-color: rgba(255, 255, 255, 0.545);
+	border-radius: 5px;
+	padding: 0 10px 0 10px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 40px 40px 40px;
+	border-radius: 5px;
+	width: 90%;
+}
+
+.sectionTitle {
+	font-size: 18px;
+	color: #535bf2;
+	margin: 5px 0 5px 0;
+}
+
+.activity {
+	padding: 15px;
+	background-color: white;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 350px;
+	min-width: 640px;
+	overflow-x: auto;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 2px solid #535bf2;
+}
+
+.countryRelation {
+	width: 50%;
+	min-width: 640px;
+	overflow-x: auto;
+	padding: 15px;
+	background-color: white;
+	border-radius: 5px;
+	border: 2px solid #535bf2;
+}
+
+.labelInput {
+	display: flex;
+	flex-direction: row;
+}
+
+.input {
+	padding: 10px;
+	margin: 10px;
+	width: 280px;
+	border-color: #535bf2;
+	border-radius: 5px;
+}
+
+.input:hover {
+	background-color: #a7aaec3e;
+}
+
+.formSection {
+	border-radius: 5px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.formSection input {
+	flex: 1;
+	padding-top: 10px;
+}
+
+.customLabel {
+	padding: 15px;
+	font-weight: 600;
+	margin-right: 10px;
+	font-size: 16px;
+}
+
+.seasonContainer {
+	border-color: #535bf2;
+	border-radius: 5px;
+	background-color: white;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin-left: 50px;
+	align-items: center;
+	width: 400px;
+}
+
+.errorMessage {
+	font-size: 12px;
+	color: rgb(144, 8, 8);
+	padding-right: 15px;
+	font-weight: bold;
+	text-align: right;
+	margin: 0;
+}
+
+.difficultyContainer {
+	border-color: #535bf2;
+	border-width: 1px;
+	border-radius: 5px;
+	background-color: white;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	align-items: center;
+	gap: 10px;
+	margin-left: 40px;
+	width: 250px;
+}
+
+.formSelection {
+	padding-left: 40px;
+}
+
+.selectCountriesContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 5px 5px 0 0;
+	background-color: white;
+}
+
+.formButton {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	background-color: #535bf2;
+	color: white;
+	width: 94%;
+	font-weight: 600;
+}
+
+.option:hover {
+	cursor: pointer;
+}

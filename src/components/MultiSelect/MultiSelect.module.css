@@ -1,0 +1,33 @@
+.continentContainer {
+	background-color: white;
+	border-radius: 5px;
+	min-width: 640px;
+	/* 	padding: 15px;
+ */
+}
+
+.continent {
+	padding: 0 15px 0 15px;
+}
+
+.countries {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	align-items: center;
+	font-weight: 400;
+	padding: 10px;
+	max-height: 150px;
+	max-width: 640px;
+	overflow-y: auto;
+	background-color: rgba(226, 226, 226, 0.782);
+	border-radius: 5px;
+}
+.country:hover {
+	cursor: pointer;
+}
+
+.continentLabel {
+	font-size: 16px;
+	color: #535bf2;
+}

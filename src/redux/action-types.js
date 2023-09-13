@@ -1,0 +1,18 @@
+export const ORDER_BY_NAME = 'ORDER_BY_NAME';
+export const ORDER_BY_POPULATION = 'ORDER_BY_POPULATION';
+
+export const FILTER_BY_CONTINENT = 'FILTER_BY_CONTINENT';
+export const FILTER_BY_ACTIVITY = 'FILTER_BY_ACTIVITY';
+
+export const GET_COUNTRIES = 'GET_COUNTRIES';
+export const GET_COUNTRY_BY_NAME = 'GET_COUNTRY_BY_NAME';
+
+export const GET_ALL_ACTIVITY_NAMES = 'GET_ALL_ACTIVITY_NAMES';
+export const POST_ACTIVITY = 'POST_ACTIVITY';
+
+export const NEXT_PAGE = 'NEXT_PAGE';
+export const PREV_PAGE = 'PREV_PAGE';
+
+export const REQUEST_ERROR = 'REQUEST_ERROR';
+
+export const RESET = 'RESET';

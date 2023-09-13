@@ -1,0 +1,42 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	background-color: #242424;
+}
+
+.subtitle {
+	font-size: 0.8em;
+	padding-left: 24px;
+	font-weight: 600;
+	color: #535bf2;
+}
+
+.gif {
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+}
+
+.landingButton {
+	border-width: 1.5px;
+	border-color: #646cff;
+}
+button:hover {
+	box-shadow: 2px aliceblue;
+	border-color: #646cff;
+	border-width: 2px;
+	filter: drop-shadow(0 0 2em #646cffaa);
+	-webkit-transform: scale(1.03);
+}
+button:focus,
+button:focus-visible {
+	outline: 6px auto -webkit-focus-ring-color;
+}
+
+.landingSearchBar {
+	margin-right: 30px;
+}

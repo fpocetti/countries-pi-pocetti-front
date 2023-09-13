@@ -1,0 +1,27 @@
+.pagination {
+	display: flex;
+	flex-direction: row;
+	justify-items: center;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.text {
+	margin: 0 20px;
+}
+
+.button {
+	background-color: #535bf2;
+	color: white;
+	font-weight: 600;
+	width: 130px;
+}
+
+button::hover {
+	cursor: pointer;
+}
+
+button::disabled {
+	background-color: #535bf273;
+	cursor: not-allowed;
+}

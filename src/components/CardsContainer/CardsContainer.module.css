@@ -1,0 +1,52 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+	width: 100%;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cardsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #242424;
+	overflow-y: auto;
+	height: 70vh;
+}
+
+.card {
+}
+
+.h2 {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+
+.emptyCard {
+	margin-top: 28px;
+}
+
+@media screen and (max-width: 768px) {
+	.cardsContainer {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cardsContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+}

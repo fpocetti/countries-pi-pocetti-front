@@ -1,0 +1,22 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	margin-left: 20px;
+	padding-right: 20px;
+	padding-top: 15px;
+	padding-left: 20px;
+	background-color: #3a3a3a;
+	height: 230px;
+	border-radius: 5px;
+	width: 500px;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.title {
+	color: #f2cb05;
+	font-weight: 500;
+	text-align: center;
+}
