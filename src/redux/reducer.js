@@ -61,6 +61,7 @@ const rootReducer = (state = initialState, action) => {
 						totalCountries.length / state.pagination.pageSize
 					),
 				},
+
 				allCountries: totalCountries,
 				filteredCountries: totalCountries,
 			};
@@ -74,6 +75,7 @@ const rootReducer = (state = initialState, action) => {
 				...state,
 				axiosError: null,
 				filteredCountries: totalCountries,
+
 				pagination: {
 					...state.pagination,
 					page: 1,
