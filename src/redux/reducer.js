@@ -116,7 +116,9 @@ const rootReducer = (state = initialState, action) => {
 				},
 			};
 			response.filteredCountries = applyFilters(
+				state.searchQueryStore,
 				state.allCountries,
+				state.filteredCountries,
 				response.appliedFilters,
 				response.order
 			);
@@ -136,7 +138,9 @@ const rootReducer = (state = initialState, action) => {
 				},
 			};
 			response.filteredCountries = applyFilters(
+				state.searchQueryStore,
 				state.allCountries,
+				state.filteredCountries,
 				response.appliedFilters,
 				response.order
 			);
@@ -155,7 +159,9 @@ const rootReducer = (state = initialState, action) => {
 				},
 			};
 			response.filteredCountries = applyFilters(
+				state.searchQueryStore,
 				state.allCountries,
+				state.filteredCountries,
 				response.appliedFilters,
 				response.order
 			);
@@ -179,7 +185,9 @@ const rootReducer = (state = initialState, action) => {
 				},
 			};
 			response.filteredCountries = applyFilters(
+				state.searchQueryStore,
 				state.allCountries,
+				state.filteredCountries,
 				response.appliedFilters,
 				response.order
 			);
@@ -209,7 +217,9 @@ const rootReducer = (state = initialState, action) => {
 				searchQueryStore: '',
 			};
 			response.filteredCountries = applyFilters(
+				state.searchQueryStore,
 				state.allCountries,
+				state.filteredCountries,
 				response.appliedFilters,
 				response.order
 			);

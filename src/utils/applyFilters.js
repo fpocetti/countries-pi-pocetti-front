@@ -1,6 +1,17 @@
-export default function applyFilters(countries, filters, order) {
-	let countriesCopy = [...countries];
+export default function applyFilters(
+	searchQuery,
+	allCountries,
+	filteredContries,
+	filters,
+	order
+) {
+	let countriesCopy;
 
+	if (searchQuery.length === 0) {
+		countriesCopy = [...allCountries];
+	} else {
+		countriesCopy = [...filteredContries];
+	}
 	console.log('after reset appliedFilters ', filters);
 	console.log('after reset order ', order);
 	if (filters.continent) {
