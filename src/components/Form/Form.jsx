@@ -174,7 +174,7 @@ export default function Form() {
 									value={activity.name}
 									onChange={handleChange}
 									className={style.input}
-									placeholder="Activity name"
+									placeholder="Type a new activity name..."
 								/>
 							</div>
 							{errors.name && (

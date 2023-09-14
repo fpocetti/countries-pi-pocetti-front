@@ -38,11 +38,6 @@ export default function CardsContainer() {
 	return (
 		<div className={style.container}>
 			<div className={style.page}>
-				{/* {location.search.includes(`?name=${searchQueryStore}`) && (
-				<h3 className={style.queryResults}>
-					{`${filteredCountries.length} search results for '${searchQueryStore}'`}
-				</h3>
-			)} */}
 				<div>
 					{location.search.includes(`?name=${searchQueryStore}`) && (
 						<h3 className={style.queryResults}>

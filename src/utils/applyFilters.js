@@ -12,8 +12,7 @@ export default function applyFilters(
 	} else {
 		countriesCopy = [...filteredContries];
 	}
-	console.log('after reset appliedFilters ', filters);
-	console.log('after reset order ', order);
+
 	if (filters.continent) {
 		countriesCopy = countriesCopy.filter(
 			(country) => country.continent === filters.continent

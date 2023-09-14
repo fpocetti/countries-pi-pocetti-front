@@ -36,8 +36,6 @@ export const getCountries = () => {
 };
 
 export const getCountriesByName = (name) => {
-	console.log('request al server ', name);
-
 	return async function (dispatch) {
 		try {
 			let response = await axios.get(`${URL_COUNTRIES}?name=${name}`);
@@ -76,7 +74,6 @@ export const postActivity = (activity) => {
 	return async function (dispatch) {
 		try {
 			await axios.post(URL_ACTIVITIES, activity).then(({ data }) => {
-				console.log(data);
 				return dispatch({
 					type: POST_ACTIVITY,
 					payload: data,
@@ -92,7 +89,6 @@ export const postActivity = (activity) => {
 };
 
 export function orderByName(order) {
-	console.log(order, 'en el action');
 	return {
 		type: ORDER_BY_NAME,
 		payload: order,

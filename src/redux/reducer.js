@@ -47,7 +47,6 @@ const rootReducer = (state = initialState, action) => {
 
 	switch (action.type) {
 		case GET_COUNTRIES:
-			console.log('ejecución de get_countries');
 			totalCountries = [...action.payload];
 
 			return {
@@ -67,8 +66,6 @@ const rootReducer = (state = initialState, action) => {
 			};
 
 		case GET_COUNTRY_BY_NAME:
-			console.log('ejecución de get country by name', action.payload);
-
 			totalCountries = [...action.payload];
 
 			return {
@@ -87,8 +84,6 @@ const rootReducer = (state = initialState, action) => {
 			};
 
 		case GET_ALL_ACTIVITY_NAMES:
-			console.log('ejecución de get all activities');
-
 			return {
 				...state,
 				requestError: null,
@@ -96,7 +91,6 @@ const rootReducer = (state = initialState, action) => {
 			};
 
 		case POST_ACTIVITY:
-			console.log('ejecución del post activity: ', action.payload);
 			return {
 				...state,
 				requestError: null,
@@ -251,7 +245,6 @@ const rootReducer = (state = initialState, action) => {
 			return response;
 
 		case REQUEST_ERROR:
-			console.log('Ejecución del error de petición ', action.payload);
 			response = {
 				...state,
 				requestError: action.payload,

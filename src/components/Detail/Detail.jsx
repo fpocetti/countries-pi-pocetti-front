@@ -30,10 +30,6 @@ export default function Detail() {
 			});
 	}, [id]);
 
-	console.log('Detail allActivities: ', allActivities);
-	console.log(country);
-	console.log(error);
-
 	if (error) {
 		return (
 			<div>
