@@ -1,13 +1,13 @@
 .filterSection {
 	flex-direction: column;
 	justify-content: space-around;
-	margin-top: 28px;
+	margin-top: 10px;
 	margin-left: 20px;
 	padding-right: 20px;
 	padding-top: 15px;
 	padding-left: 20px;
 	background-color: #3a3a3a;
-	height: 80vh;
+	height: 75vh;
 	border-radius: 5px;
 	width: 250px;
 }

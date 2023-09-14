@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Card from '../Card/Card';
 import EmptyCard from '../EmptyCard/EmptyCard';
 import Pagination from '../Pagination/Pagination';
+import { useLocation } from 'react-router-dom';
 
 // eslint-disable-next-line no-unused-vars
 import style from './CardsContainer.module.css';
@@ -11,6 +12,9 @@ import { useSelector } from 'react-redux';
 export default function CardsContainer() {
 	const filteredCountries = useSelector((state) => state.filteredCountries);
 	const axiosError = useSelector((state) => state.axiosError);
+	const searchQuery = useSelector((state) => state.searchQuery);
+
+	const location = useLocation();
 
 	const { page, totalPageCount, pageSize } = useSelector(
 		(state) => state.pagination
@@ -31,6 +35,11 @@ export default function CardsContainer() {
 	return (
 		<div className={style.container}>
 			<div className={style.page}>
+				{location.search.includes(`?name=${searchQuery}`) && (
+					<h3 className={style.queryResults}>
+						{`${filteredCountries.length} search results for '${searchQuery}'`}
+					</h3>
+				)}
 				<div className={style.cardsContainer}>
 					{filteredCountries
 						?.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize)

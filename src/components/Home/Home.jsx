@@ -17,6 +17,7 @@ export default function Home() {
 
 	const filteredCountries = useSelector((state) => state.filteredCountries);
 	const searchQuery = useSelector((state) => state.searchQuery);
+	console.log('this is the search query', searchQuery);
 
 	useEffect(() => {
 		if (location.search === `?name:${searchQuery}`) {
@@ -33,7 +34,9 @@ export default function Home() {
 	return (
 		<div className={style.container}>
 			<Filters />
-			<CardsContainer />
+			<div className={style.results}>
+				<CardsContainer />
+			</div>
 		</div>
 	);
 }

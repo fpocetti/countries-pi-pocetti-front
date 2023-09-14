@@ -65,11 +65,12 @@ const rootReducer = (state = initialState, action) => {
 
 		case GET_COUNTRY_BY_NAME:
 			console.log('ejecución de get country by name', action.payload);
-			totalCountries = [...action.payload];
+			totalCountries = [...action.payload.data];
 
 			return {
 				...state,
 				axiosError: null,
+				searchQuery: action.payload.name,
 				filteredCountries: totalCountries,
 				pagination: {
 					...state.pagination,

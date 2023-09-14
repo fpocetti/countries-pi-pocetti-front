@@ -3,14 +3,17 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 80vh;
-	width: 100%;
+	height: 75vh;
+	max-width: 1400px;
 }
 
 .page {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	max-width: 1400px;
+	max-height: 75vh;
 }
 
 .cardsContainer {
@@ -18,14 +21,22 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	margin-top: 15px;
 	margin-bottom: 15px;
 	background-color: #242424;
 	overflow-y: auto;
 	height: 70vh;
+	max-width: 1400px;
 }
 
-.card {
+.queryResults {
+	height: 40px;
+	text-align: right;
+	color: #f2cb05;
+	font-weight: 400;
+	font-size: 14px;
+	margin: 0px;
+	margin-top: 10px;
+	max-width: 1400px;
 }
 
 .h2 {
