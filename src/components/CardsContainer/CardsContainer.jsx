@@ -21,8 +21,11 @@ export default function CardsContainer() {
 	);
 
 	useEffect(() => {
-		console.log('cards actualizado con ', filteredCountries);
-	}, [filteredCountries]);
+		if (axiosError) {
+			console.log('cards actualizado con ', filteredCountries);
+			console.log('axiosError', axiosError);
+		}
+	}, [axiosError, filteredCountries]);
 
 	if (axiosError || filteredCountries.length === 0) {
 		return (

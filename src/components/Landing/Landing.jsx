@@ -2,9 +2,17 @@ import SearchBar from '../SearchBar/SearchBar';
 import { useNavigate } from 'react-router-dom';
 import style from './Landing.module.css';
 import rotatingEarth from '../../assets/rotating-earth.gif';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getCountries } from '../../redux/action';
 
 export default function Landing() {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getCountries());
+	}, []);
 
 	const navigateToHome = () => {
 		navigate('/countries');

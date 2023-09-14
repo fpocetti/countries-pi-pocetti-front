@@ -243,6 +243,7 @@ const rootReducer = (state = initialState, action) => {
 			response = {
 				...state,
 				axiosError: action.payload,
+				filteredCountries: [],
 			};
 			return response;
 
