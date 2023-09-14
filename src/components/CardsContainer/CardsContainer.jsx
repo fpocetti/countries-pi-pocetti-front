@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 
 export default function CardsContainer() {
 	const filteredCountries = useSelector((state) => state.filteredCountries);
-	const axiosError = useSelector((state) => state.axiosError);
+	const requestError = useSelector((state) => state.requestError);
 	const searchQueryStore = useSelector((state) => state.searchQueryStore);
 
 	const location = useLocation();
@@ -21,13 +21,13 @@ export default function CardsContainer() {
 	);
 
 	useEffect(() => {
-		if (axiosError) {
+		if (requestError) {
 			console.log('cards actualizado con ', filteredCountries);
-			console.log('axiosError', axiosError);
+			console.log('requestError', requestError);
 		}
-	}, [axiosError, filteredCountries]);
+	}, [requestError, filteredCountries]);
 
-	if (axiosError || filteredCountries.length === 0) {
+	if (requestError || filteredCountries.length === 0) {
 		return (
 			<div>
 				<EmptyCard className={style.emptyCard} />

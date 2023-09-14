@@ -23,7 +23,7 @@ const initialState = {
 	filteredCountries: [],
 	allActivities: [],
 	searchQueryStore: '',
-	axiosError: null,
+	requestError: null,
 	postMessage: '',
 	pagination: {
 		page: 1,
@@ -52,7 +52,7 @@ const rootReducer = (state = initialState, action) => {
 
 			return {
 				...state,
-				axiosError: null,
+				requestError: null,
 				searchQueryStore: '',
 				pagination: {
 					...state.pagination,
@@ -73,7 +73,7 @@ const rootReducer = (state = initialState, action) => {
 
 			return {
 				...state,
-				axiosError: null,
+				requestError: null,
 				filteredCountries: totalCountries,
 
 				pagination: {
@@ -91,7 +91,7 @@ const rootReducer = (state = initialState, action) => {
 
 			return {
 				...state,
-				axiosError: null,
+				requestError: null,
 				allActivities: [...action.payload],
 			};
 
@@ -99,7 +99,7 @@ const rootReducer = (state = initialState, action) => {
 			console.log('ejecución del post activity: ', action.payload);
 			return {
 				...state,
-				axiosError: null,
+				requestError: null,
 				postMessage: action.payload,
 			};
 
@@ -201,7 +201,7 @@ const rootReducer = (state = initialState, action) => {
 		case RESET:
 			response = {
 				...state,
-				axiosError: null,
+				requestError: null,
 				appliedFilters: {
 					continent: null,
 					activity: null,
@@ -254,7 +254,7 @@ const rootReducer = (state = initialState, action) => {
 			console.log('Ejecución del error de petición ', action.payload);
 			response = {
 				...state,
-				axiosError: action.payload,
+				requestError: action.payload,
 				filteredCountries: [],
 			};
 			return response;

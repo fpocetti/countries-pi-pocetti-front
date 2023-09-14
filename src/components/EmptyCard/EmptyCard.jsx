@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import style from './EmptyCard.module.css';
 
 export default function EmptyCard({ idError }) {
-	const axiosError = useSelector((state) => state.axiosError);
+	const requestError = useSelector((state) => state.requestError);
 
 	if (idError) {
 		return (
@@ -15,8 +15,8 @@ export default function EmptyCard({ idError }) {
 
 	return (
 		<div className={style.container}>
-			{axiosError ? (
-				<h3 className={style.title}>{axiosError}</h3>
+			{requestError ? (
+				<h3 className={style.title}>{requestError}</h3>
 			) : (
 				<h3 className={style.title}>
 					There are no countries matching your filters

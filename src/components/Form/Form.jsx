@@ -13,7 +13,7 @@ import MultiSelect from '../MultiSelect/MultiSelect';
 export default function Form() {
 	const allCountries = useSelector((state) => state.allCountries);
 	const postMessage = useSelector((state) => state.postMessage);
-	const axiosError = useSelector((state) => state.axiosError);
+	const requestError = useSelector((state) => state.requestError);
 
 	//connect to Activity names to validate if name is in use
 	const allActivities = useSelector((state) => state.allActivities);
@@ -127,8 +127,8 @@ export default function Form() {
 			countries: '',
 		});
 
-		if (axiosError) {
-			alert(axiosError);
+		if (requestError) {
+			alert(requestError);
 		} else {
 			alert(postMessage);
 		}
