@@ -34,6 +34,7 @@ export const getCountries = () => {
 		}
 	};
 };
+
 export const getCountriesByName = (name) => {
 	console.log('request al server ', name);
 

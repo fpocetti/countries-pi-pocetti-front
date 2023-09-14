@@ -116,9 +116,9 @@ export default function Form() {
 		}
 	};
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
-		dispatch(postActivity(activity));
+		await dispatch(postActivity(activity));
 		setActivity({
 			name: '',
 			difficulty: '',
@@ -126,12 +126,6 @@ export default function Form() {
 			seasons: '',
 			countries: '',
 		});
-
-		if (requestError) {
-			alert(requestError);
-		} else {
-			alert(postMessage);
-		}
 	};
 
 	//server requests when mounting component
@@ -149,6 +143,15 @@ export default function Form() {
 			});
 		}
 	}, [activity.name]);
+
+	//handle asynchrony in alert rendering
+	useEffect(() => {
+		if (postMessage) {
+			alert(postMessage);
+		} else if (requestError) {
+			alert(requestError);
+		}
+	}, [postMessage, requestError]);
 
 	return (
 		<div className={style.centerForm}>
