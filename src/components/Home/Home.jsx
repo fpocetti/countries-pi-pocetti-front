@@ -18,6 +18,10 @@ export default function Home() {
 	const filteredCountries = useSelector((state) => state.filteredCountries);
 	const searchQueryStore = useSelector((state) => state.searchQueryStore);
 
+	// useEffect(() => {
+	// 	dispatch(getCountries());
+	// }, []);
+
 	useEffect(() => {
 		if (location.search === `?name:${searchQueryStore}`) {
 			dispatch(getCountriesByName(searchQueryStore));

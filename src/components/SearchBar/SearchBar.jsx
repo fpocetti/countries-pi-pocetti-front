@@ -15,9 +15,6 @@ export default function SearchBar() {
 
 	//to handle client's input
 	const [searchQuery, setSearchQuery] = useState('');
-	const searchQueryStore = useSelector((store) => {
-		store.searchQueryStore;
-	});
 
 	const handleChange = (event) => {
 		setSearchQuery(event.target.value);
