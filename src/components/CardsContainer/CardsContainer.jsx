@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 export default function CardsContainer() {
 	const filteredCountries = useSelector((state) => state.filteredCountries);
 	const axiosError = useSelector((state) => state.axiosError);
-	const searchQuery = useSelector((state) => state.searchQuery);
+	const searchQueryStore = useSelector((state) => state.searchQueryStore);
 
 	const location = useLocation();
 
@@ -35,9 +35,9 @@ export default function CardsContainer() {
 	return (
 		<div className={style.container}>
 			<div className={style.page}>
-				{location.search.includes(`?name=${searchQuery}`) && (
+				{location.search.includes(`?name=${searchQueryStore}`) && (
 					<h3 className={style.queryResults}>
-						{`${filteredCountries.length} search results for '${searchQuery}'`}
+						{`${filteredCountries.length} search results for '${searchQueryStore}'`}
 					</h3>
 				)}
 				<div className={style.cardsContainer}>

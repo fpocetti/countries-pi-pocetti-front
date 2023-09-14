@@ -14,6 +14,7 @@ import {
 	GET_COUNTRY_BY_NAME,
 	POST_ACTIVITY,
 	REQUEST_ERROR,
+	SET_SEARCH_QUERY,
 } from './action-types';
 
 export const getCountries = () => {
@@ -28,25 +29,21 @@ export const getCountries = () => {
 		} catch (error) {
 			return dispatch({
 				type: REQUEST_ERROR,
-				payload: error.response.data,
+				payload: error.response,
 			});
 		}
 	};
 };
-
 export const getCountriesByName = (name) => {
 	console.log('request al server ', name);
 
 	return async function (dispatch) {
 		try {
 			let response = await axios.get(`${URL_COUNTRIES}?name=${name}`);
-			const data = response.data;
+
 			return dispatch({
 				type: GET_COUNTRY_BY_NAME,
-				payload: {
-					data,
-					name,
-				},
+				payload: response.data,
 			});
 		} catch (error) {
 			return dispatch({
@@ -138,5 +135,12 @@ export function nextPage(page) {
 	return {
 		type: NEXT_PAGE,
 		payload: nextPage,
+	};
+}
+
+export function setSearchQueryStore(searchQuery) {
+	return {
+		type: SET_SEARCH_QUERY,
+		payload: searchQuery,
 	};
 }

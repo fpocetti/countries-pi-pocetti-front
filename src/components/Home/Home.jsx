@@ -16,18 +16,17 @@ export default function Home() {
 	const location = useLocation();
 
 	const filteredCountries = useSelector((state) => state.filteredCountries);
-	const searchQuery = useSelector((state) => state.searchQuery);
-	console.log('this is the search query', searchQuery);
+	const searchQueryStore = useSelector((state) => state.searchQueryStore);
 
 	useEffect(() => {
-		if (location.search === `?name:${searchQuery}`) {
-			dispatch(getCountriesByName(searchQuery));
+		if (location.search === `?name:${searchQueryStore}`) {
+			dispatch(getCountriesByName(searchQueryStore));
 		}
 		if (location.search.length === 0) {
 			dispatch(getCountries());
 		}
 		dispatch(getActivityNames());
-	}, [searchQuery]);
+	}, [searchQueryStore]);
 
 	console.log('filteredCountries count at Home: ', filteredCountries.length);
 

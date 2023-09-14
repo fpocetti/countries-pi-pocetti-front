@@ -16,3 +16,4 @@ export const PREV_PAGE = 'PREV_PAGE';
 export const REQUEST_ERROR = 'REQUEST_ERROR';
 
 export const RESET = 'RESET';
+export const SET_SEARCH_QUERY = 'SET_SEARCH_QUERY';

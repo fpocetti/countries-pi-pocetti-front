@@ -13,6 +13,7 @@ import {
 	PREV_PAGE,
 	POST_ACTIVITY,
 	REQUEST_ERROR,
+	SET_SEARCH_QUERY,
 } from './action-types';
 
 import applyFilters from '../utils/applyFilters';
@@ -21,7 +22,7 @@ const initialState = {
 	allCountries: [],
 	filteredCountries: [],
 	allActivities: [],
-	searchQuery: '',
+	searchQueryStore: '',
 	axiosError: null,
 	postMessage: '',
 	pagination: {
@@ -52,6 +53,7 @@ const rootReducer = (state = initialState, action) => {
 			return {
 				...state,
 				axiosError: null,
+				searchQueryStore: '',
 				pagination: {
 					...state.pagination,
 					countriesCount: totalCountries.length,
@@ -65,12 +67,12 @@ const rootReducer = (state = initialState, action) => {
 
 		case GET_COUNTRY_BY_NAME:
 			console.log('ejecución de get country by name', action.payload);
-			totalCountries = [...action.payload.data];
+
+			totalCountries = [...action.payload];
 
 			return {
 				...state,
 				axiosError: null,
-				searchQuery: action.payload.name,
 				filteredCountries: totalCountries,
 				pagination: {
 					...state.pagination,
@@ -202,7 +204,7 @@ const rootReducer = (state = initialState, action) => {
 					...state.pagination,
 					page: 1,
 				},
-				searchQuery: '',
+				searchQueryStore: '',
 			};
 			response.filteredCountries = applyFilters(
 				state.allCountries,
@@ -241,6 +243,13 @@ const rootReducer = (state = initialState, action) => {
 			response = {
 				...state,
 				axiosError: action.payload,
+			};
+			return response;
+
+		case SET_SEARCH_QUERY:
+			response = {
+				...state,
+				searchQueryStore: action.payload,
 			};
 			return response;
 
